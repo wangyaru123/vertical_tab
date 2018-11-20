@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/list_1/list_1",
+    "pages/index/index",
+    "pages/wx-charts/wx-charts",
+    "pages/text/text"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "生活助手",
+    "navigationBarTextStyle": "black"
+  }
+}

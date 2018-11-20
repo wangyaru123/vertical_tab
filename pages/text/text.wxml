@@ -1,0 +1,20 @@
+<!-- 模板、传值 -->
+<include src="../templates/header" />
+<button type="primary" bindtap="btnClick">{{btntext}}</button>
+<view wx:if="{{show}}">{{text}}1</view>
+<view wx:else>{{text}}2</view>
+<view wx:for="{{news}}" wx:for-item="news_item">
+ {{news_item}}
+</view>
+<import src="../templates/footer" />
+<template is="footer1" data = "{{ttt:'aaaaa'}}" />
+<!-- 事件冒泡 -->
+<view bindtap="view1_click" id="view1" data-title="11">
+11
+  <view bindtap="view2_click" id="view2">
+  22
+    <view bindtap="view3_click" id="view3">
+    33
+    </view>
+  </view>
+</view>

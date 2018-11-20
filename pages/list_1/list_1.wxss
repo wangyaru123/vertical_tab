@@ -1,0 +1,187 @@
+page{
+  width:100%;
+  height:100%;
+}
+.machineList {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height:90%;
+  top: 48px;
+  overflow: hidden;
+  font-family:"微软雅黑";
+}
+
+.machineList .menu-wrapper {
+  flex: 0 0 70px;
+  width: 70px;
+  height:100%;
+  background: #e5e8eb;
+}
+
+.machineList .menu-wrapper .menu-item {
+  display: table;
+  width: 56px;
+  height: 54px;
+  line-height: 14px;
+  padding: 0 8px;
+  border-bottom:1px solid rgba(7,17,27,0.1);
+}
+
+.machineList .menu-wrapper .menu-item:current {
+  position: relative;
+  z-index: 10;
+  margin-top: -1px;
+  background: #fff;
+  font-weight: 700;
+}
+
+.machineList .menu-wrapper .menu-item:current .text {
+  border: none;
+}
+
+.machineList .menu-wrapper .menu-item .icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: top;
+  margin-right: 4px;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+}
+
+.machineList .menu-wrapper .menu-item .text {
+  display: table-cell;
+  width: 56px;
+  vertical-align: middle;
+  position: relative;
+  font-size: 12px;
+}
+
+.machineList .list-wrapper {
+  flex: 1;
+}
+
+.machineList .list-wrapper .list .title {
+  padding-left: 4px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  color: #000;
+}
+.machineList .list-wrapper .list .list-item-container{
+   display: flex;
+   width:100%;
+   flex-wrap: wrap;
+}
+.machineList .list-wrapper .list .list-item {
+  position: relative;
+  display: flex;
+  width:45%;
+  margin:5px;
+  border:1px solid rgba(7,17,27,0.1);
+  border-radius: 10px;
+}
+
+.machineList .list-wrapper .list .list-item .icon {
+  flex: 0 0 46px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+.machineList .list-wrapper .list .list-item .icon image{
+  width:46px;
+  height:46px;
+  align-items: center;
+}
+.machineList .list-wrapper .list .list-item .content {
+  flex: 1;
+}
+
+.machineList .list-wrapper .list .list-item .content .name {
+  margin: 2px 0 8px 0;
+  font-size: 14px;
+  line-height: 14px;
+  height: 14px;
+  color: rgb(7, 17, 27);
+}
+
+.machineList .list-wrapper .list .list-item .content .desc, .extra {
+  font-size: 10px;
+  line-height: 10px;
+  color: rgb(147, 153, 159);
+}
+
+.machineList .list-wrapper .list .list-item .content .desc {
+  margin-bottom: 8px;
+  line-height: 12px;
+}
+
+.machineList .list-wrapper .list .list-item .content .extra .count {
+  margin-right: 12px;
+}
+.machineList .list-wrapper .list .list-item .content .item-title{
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+}
+.machineList .list-wrapper .list .list-item .content .item-opt {
+  font-weight: 700px;
+  line-height: 24px;
+  color: rgb(240, 20, 20);
+}
+
+.machineList .list-wrapper .list .list-item .content .item-opt .opt-status{
+  color: #54b40d;
+  font-size: 14px;
+  text-align: left;
+}
+.machineList .list-wrapper .list .list-item .content .item-opt .opt-offline{
+  color: #999;
+  font-size: 14px;
+  text-align: left;
+}
+
+.text-red{
+  color: #d81e06;
+}
+/*search*/
+.weui-search-bar {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:90;
+}
+.search-bar-scan{
+	line-height:30px;
+	width:32px;
+	height:30px;
+}
+.search-bar-scan image{
+  width:22px;
+	height:22px;
+  margin-top:4px;
+}
+.search-bar-cart{
+	margin-left:10px;
+	line-height:28px;
+	width:32px;
+	height:30px;
+}
+.search-bar-cart-icon image{
+	width:24px;
+	height:24px;
+    margin-top:2px;
+}
+.search-btn {
+  width: 50px;
+  height: 28px;
+  line-height: 28px;
+  margin-left: 6px;
+  background-color: #06a7e2;
+  white-space: nowrap;
+  color: #ffffff;
+  border-radius: 3px;
+  text-align: center;
+}

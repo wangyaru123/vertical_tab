@@ -1,0 +1,42 @@
+<view class="weui-search-bar">
+  <view class="search-bar-scan">
+    <image src="/image/scan.png" bindtap="scanCode"></image>
+  </view>
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{keyword}}" bindblur="inputBlur" bindinput="inputTyping" />
+      <view class="weui-icon-clear" wx:if="{{keyword.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+  </view>
+  <view class="search-btn" bindtap="search">搜索</view>
+</view>
+<view class="machineList">
+  <view class="menu-wrapper">
+    <scroll-view scroll-y="true" style="height: 100%;">
+      <view wx:for="{{lists}}" wx:key="{{index}}" class="menu-item border-1px" style="color:{{selectIndex==index?'#06a7e2':'#000'}};background:{{selectIndex==index?'#fff':'#e5e8eb'}};" bindtap="selectMenu" data-item-index="{{index}}">
+        <view class="text">
+          {{item.type}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <scroll-view scroll-y="true" style="height: 100%;" scroll-into-view="{{toView}}" class="list-wrapper">
+    <view wx:for="{{lists}}" wx:key="{{parentIndex}}" class="list list-hook" wx:for-index="parentIndex">
+      <view id="order{{parentIndex}}" class="title">{{item.type}}</view>
+      <view class="list-item-container">
+        <view wx:for="{{item.list}}" wx:key="{{listIndex}}" wx:for-index="listIndex" class="list-item" wx:for-item="list" >
+          <view class="icon">
+            <image src="{{list.image}}"></image>
+          </view>
+          <view class="content">
+            <view class="title">{{list.name}}</view>
+            <view class="desc">{{list.sn}}</view>
+          </view>
+        </view>
+      </view>   
+    </view>
+  </scroll-view>
+</view>

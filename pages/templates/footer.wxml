@@ -1,0 +1,7 @@
+<template name="footer1">
+底部1{{ttt}}
+</template>
+<!-- <import src=""> -->
+<template name="footer2">
+底部2
+</template>
